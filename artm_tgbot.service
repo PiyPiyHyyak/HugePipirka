@@ -1,0 +1,14 @@
+
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=artm
+Group=artm
+WorkingDirectory=/home/artm/HugePipirka/
+Environment="PYTHONPATH=/home/artm/HugePipirka/"
+ExecStart=/home/artm/HugePipirka/.venv/bin/python /home/artm/HugePipirka/Main.py
+
+[Install]
+WantedBy=multi-user.target
